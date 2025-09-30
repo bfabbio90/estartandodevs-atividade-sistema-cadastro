@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import "./form.css";
 
-export default function Formulario({
+export default function Form({
   onSubmit,
   usuarios,
   modoEdicao,
