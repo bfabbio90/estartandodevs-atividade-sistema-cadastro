@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import "./form.css";
 
-export default function Formulario({
+export default function Form({
   onSubmit,
   usuarios,
   modoEdicao,
@@ -22,20 +23,23 @@ export default function Formulario({
   }, [usuarioEdicao]);
 
   const validar = () => {
-    if (!nome || !email || !idade || !cidade) {
+  switch (true) {
+    case !nome || !email || !idade || !cidade:
       return "Preencha todos os campos.";
-    }
-    if (!email.includes("@")) {
+
+    case !email.includes("@"):
       return "Digite um email válido.";
-    }
-    if (usuarios.some((u) => u.email === email) && modoEdicao === null) {
+
+    case usuarios.some((u) => u.email === email) && modoEdicao === null:
       return "Email já cadastrado.";
-    }
-    if (isNaN(idade) || Number(idade) <= 0) {
+
+    case isNaN(idade) || Number(idade) <= 0:
       return "Idade deve ser maior que 0.";
-    }
-    return null;
-  };
+
+    default:
+      return null;
+  }
+};
 
   const handleSubmit = (e) => {
     e.preventDefault();
