@@ -1,15 +1,17 @@
-import UsuarioItem from "./UsuarioItem";
+import UserItem from "../userItem/UserItem";
 
-export default function ListaUsuarios({ usuarios, onRemover, onEditar }) {
+export default function UserList({ usuarios, onRemover, onEditar }) {
   return (
     <ul className="listaUsuarios">
-      {usuarios.map((usuario, item) => (
-        <UsuarioItem
-          key={item}
-          usuario={usuario}
-          onRemover={() => onRemover(item)}
-          onEditar={() => onEditar(item)}
-        />
+      {usuarios.map((usuario, index) => (
+        usuario && (
+          <UserItem
+            key={index} 
+            usuario={usuario}
+            onRemover={() => onRemover(index)}
+            onEditar={() => onEditar(index)}
+          />
+        )
       ))}
     </ul>
   );
