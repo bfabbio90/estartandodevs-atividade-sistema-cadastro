@@ -1,44 +1,78 @@
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  background-color: #f0f2f5; 
+}
+
+
 .formulario {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 15px;
-  padding: 15px;
-  background: #fefefe;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  gap: 12px; 
+  margin: 20px auto; 
+  max-width: 400px; 
+  padding: 24px;
+  background: var(--bg-light);
+  border: 1px solid #e0e0e0;
+  border-radius: 12px; 
+  box-shadow: var(--shadow-subtle); 
 }
 
+
 .formulario input {
-  padding: 8px;
+  padding: 12px; 
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
+  border-radius: 8px;
+  font-size: 16px; 
+  color: var(--text-color);
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .formulario input:focus {
-  border-color: #007bff;
+  border-color: var(--primary-color);
   outline: none;
-  box-shadow: 0 0 3px rgba(0, 123, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2); 
 }
 
+
 .formulario button {
-  background: #007bff;
+  background: var(--primary-color);
   color: white;
-  padding: 10px;
+  padding: 12px 15px;
   border: none;
-  border-radius: 6px;
-  font-size: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600; 
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.1s ease;
+  margin-top: 8px;
 }
 
 .formulario button:hover {
-  background: #0056b3;
+  background: #1565c0; 
+  transform: translateY(-1px); 
 }
 
+.formulario button:active {
+  background: #0d47a1;
+  transform: translateY(0);
+}
+
+
 .erro {
-  color: red;
+  color: var(--error-color);
   font-size: 0.9em;
   margin-top: 5px;
+  padding: 8px;
+  background-color: #fee2e2; 
+  border-left: 4px solid var(--error-color); 
+  border-radius: 4px;
+}
+
+
+.btnEditar {
+    background: var(--secondary-color);
+}
+.btnEditar:hover {
+    background: #2e7d32;
 }

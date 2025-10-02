@@ -2,56 +2,67 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 16px;
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  padding: 16px 20px; 
+  margin-bottom: 12px;
+  background-color: var(--bg-light);
+  border: 1px solid #f0f0f0; 
+  border-radius: 10px; 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); 
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .usuarioItem:hover {
-  background-color: #f1f1f1;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  transform: translateY(-2px); 
 }
 
+
 .usuarioItem span {
-  font-size: 14px;
-  color: #333;
+  font-size: 15px; 
+  color: var(--text-color);
   font-weight: 500;
+  flex-grow: 1; 
+  margin-right: 20px;
 }
+
 
 .usuarioItem div {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
+
 
 .btnEditar,
 .btnRemover {
-  padding: 6px 12px;
-  font-size: 13px;
-  border-radius: 6px;
+  padding: 8px 16px; 
+  font-size: 14px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
 .btnEditar {
-  background-color: #4caf50;
+  background-color: var(--primary-color);
   color: white;
 }
 
 .btnEditar:hover {
-  background-color: #43a047;
-  transform: scale(1.05);
+  background-color: #1565c0; 
+  transform: scale(1.03);
 }
 
+
 .btnRemover {
-  background-color: #e53935;
+  background-color: var(--error-color);
   color: white;
 }
 
 .btnRemover:hover {
-  background-color: #d32f2f;
-  transform: scale(1.05);
+  background-color: #c5312a; 
+  transform: scale(1.03);
 }
