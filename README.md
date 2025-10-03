@@ -1,16 +1,76 @@
-# React + Vite
+# Sistema de Cadastro de Usuários (Atividade EstartandoDevs)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema simples de cadastro de usuários criado com **React + Vite**. Permite adicionar, editar, remover e buscar usuários, persistindo os dados no `localStorage`.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Tecnologias utilizadas
 
-## React Compiler
+- React  
+- Vite  
+- CSS (variáveis, responsividade)  
+- localStorage (para persistência dos dados no navegador)  
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🗂️ Estrutura do projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+├─ public/
+├─ src/
+│ ├─ components/
+│ │ ├─ form/ 
+│ │ ├─ userList/
+│ │ ├─ userItem/ 
+│ ├─ App.jsx
+│ ├─ main.jsx
+│ └─ styles 
+├─ index.html
+├─ package.json
+└─ vite.config.js
+```
+
+
+Principais componentes:
+
+- **Form**: formulário para adicionar ou editar usuário  
+- **UserList**: lista de usuários filtrada  
+- **UserItem**: renderiza cada usuário na lista com botões de editar/remover  
+
+---
+
+## 🎯 Funcionalidades
+
+- Adicionar usuário com nome (e outros campos que você queira estender)  
+- Editar usuário existente  
+- Remover usuário  
+- Buscar usuário por nome (campo busca)  
+- Persistência via `localStorage`, para que os usuários cadastrados permaneçam após recarregar a página  
+
+---
+
+## 🚀 Como rodar o projeto localmente
+
+1. Clone este repositório  
+```bash
+   git clone https://github.com/bfabbio90/estartandodevs-atividade-sistema-cadastro.git
+```
+
+2. Acesse a pasta do projeto
+```bash
+    cd estartandodevs-atividade-sistema-cadastro
+```
+
+3. Instale as dependências
+
+```bash
+    npm install
+```
+
+
+4. Execute em modo de desenvolvimento
+
+```bash
+    npm run dev
+```
+ 
