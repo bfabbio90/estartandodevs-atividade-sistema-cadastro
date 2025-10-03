@@ -1,3 +1,5 @@
+import './UserItem.css';
+
 export default function UserItem({ usuario, onRemover, onEditar }) {
   if (!usuario) return null;
 
