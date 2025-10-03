@@ -1,4 +1,5 @@
 import UserItem from "../userItem/UserItem";
+import "./UserList.css";
 
 export default function UserList({ usuarios, onRemover, onEditar, termoBusca }) {
   const usuariosFiltrados = usuarios.filter(
