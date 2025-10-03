@@ -40,3 +40,27 @@ p {
   margin-bottom: 20px;
   font-size: 1.1rem;
 }
+
+.busca-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.busca-container input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--shadow-subtle);
+}
+
+.busca-container input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-color);
+}
+
